@@ -60,6 +60,10 @@
     "react-test-renderer": "^18.2.0",
     "start-server-and-test": "^1.14.0"
   },
+  "engines": {
+    "node": ">=14.15.4 <15",
+    "npm": ">=8.19.3"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
