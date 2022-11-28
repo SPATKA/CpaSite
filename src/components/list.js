@@ -27,7 +27,7 @@ const List = ({ menuLinks, onShow, onNlshow }) => {
         </span>
         <a
           className="flex-grow-1 text-center icon-color"
-          href="mailto:support@cpasitesolutions.com"
+          href="mailto:Kartiki@knaikassociates.com"
         >
           <FontAwesomeIcon icon={faEnvelope} size="sm"></FontAwesomeIcon>
         </a>

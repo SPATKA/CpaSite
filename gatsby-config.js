@@ -7,8 +7,8 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "CPA Solutions",
-    description: "CPA solutions for people",
+    title: "KNaik Associates",
+    description: "KNaik Associates for people",
     siteUrl: `https://www.cpa-solution.com`,
     menuLinks: [
       {

@@ -223,9 +223,9 @@ exports[`Footer renders correctly 1`] = `
           </li>
           <li>
             <a
-              href="mailto:support@cpasitesolutions.com"
+              href="mailto:Kartiki@knaikassociates.com"
             >
-              support@cpasitesolutions.com
+              Kartiki@knaikassociates.com
             </a>
           </li>
         </ul>

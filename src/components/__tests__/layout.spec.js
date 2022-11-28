@@ -16,7 +16,7 @@ describe("Layout", () => {
     useStaticQuery.mockReturnValueOnce({
       site: {
         siteMetadata: {
-          title: `CPA Solutions`,
+          title: `KNaik Associates`,
           menuLinks: [],
         },
       },

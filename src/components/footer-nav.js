@@ -60,9 +60,9 @@ const FooterNav = ({ menuLinks, companyName }) => {
             <li key="call-link">
               <CallLink />
             </li>
-            <li key="support@cpasitesolutions.com">
-              <a href="mailto:support@cpasitesolutions.com">
-                support@cpasitesolutions.com
+            <li key="Kartiki@knaikassociates.com">
+              <a href="mailto:Kartiki@knaikassociates.com">
+                Kartiki@knaikassociates.com
               </a>
             </li>
           </ul>
