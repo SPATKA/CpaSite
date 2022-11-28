@@ -40,11 +40,11 @@ const List = ({ menuLinks, onShow, onNlshow }) => {
         </span>
       </div>
 
-      <Offcanvas show={show} onHide={handleClose} placement={"end"} backdrop={true} responsive="lg">
-        <Offcanvas.Header closeButton>
+      <Offcanvas className="offcanvas" show={show} onHide={handleClose} placement={"end"} backdrop={true} responsive="lg">
+        <Offcanvas.Header className="d-lg-none" closeButton>
           <Offcanvas.Title>Menu</Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body className="p-0">
+        <Offcanvas.Body className="p-0 d-lg-none">
           <Sidebar items={menuLinks} />
         </Offcanvas.Body>
       </Offcanvas>
