@@ -3,10 +3,13 @@
 exports[`Footer renders correctly 1`] = `
 <footer>
   <div
-    className="row text-center mx-auto container"
+    className="row text-center mx-auto f-card-container container"
   >
     <div
       className="col-lg-4 col-md-6 my-3 mx-auto text-center"
+      data-sal="zoom-in"
+      data-sal-duration="2000"
+      data-sal-easing="ease"
     >
       <div
         className="icon-color"
@@ -40,14 +43,18 @@ exports[`Footer renders correctly 1`] = `
         className="btn btn-primary btn-lg"
       >
         <a
-          href="tel:(800) 896-4500"
+          className="undefined disabledLink"
+          href="tel:(973) 462-4199"
         >
-          (800) 896-4500
+          (973) 462-4199
         </a>
       </button>
     </div>
     <div
       className="col-lg-4 col-md-6 my-3 mx-auto text-center"
+      data-sal="zoom-in"
+      data-sal-duration="2000"
+      data-sal-easing="ease"
     >
       <div
         className="icon-color"
@@ -89,6 +96,9 @@ exports[`Footer renders correctly 1`] = `
     </div>
     <div
       className="col-lg-4 col-md-6 my-3 mx-auto text-center"
+      data-sal="zoom-in"
+      data-sal-duration="2000"
+      data-sal-easing="ease"
     >
       <div
         className="icon-color"
@@ -130,51 +140,57 @@ exports[`Footer renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="container"
+    data-sal="slide-down"
+    data-sal-duration="2000"
+    data-sal-easing="ease"
   >
-    <h2>
-      Newsletter
-    </h2>
-    <p>
-      Subscribe to our newsletter to receive news, updates, and valuable tips.
-    </p>
     <div
-      className="mx-auto"
+      className="container"
     >
-      <form
-        className="col-sm-8 mx-auto d-inline"
+      <h2>
+        Newsletter
+      </h2>
+      <p>
+        Subscribe to our newsletter to receive news, updates, and valuable tips.
+      </p>
+      <div
+        className="mx-auto"
       >
-        <input
-          name="email"
-          placeholder="Email"
-          type="text"
-        />
-        <button
-          aria-label="submit"
-          className="btn btn-primary"
-          name="submit"
-          type="submit"
+        <form
+          className="col-sm-8 mx-auto d-inline"
         >
-          <svg
-            aria-hidden="true"
-            className="svg-inline--fa fa-rss "
-            data-icon="rss"
-            data-prefix="fas"
-            data-testid="fa-icon"
-            focusable="false"
-            role="img"
-            style={Object {}}
-            viewBox="0 0 448 512"
-            xmlns="http://www.w3.org/2000/svg"
+          <input
+            name="email"
+            placeholder="Email"
+            type="text"
+          />
+          <button
+            aria-label="submit"
+            className="btn btn-primary"
+            name="submit"
+            type="submit"
           >
-            <path
-              d="M25.57 176.1C12.41 175.4 .9117 185.2 .0523 198.4s9.173 24.65 22.39 25.5c120.1 7.875 225.7 112.7 233.6 233.6C256.9 470.3 267.4 480 279.1 480c.5313 0 1.062-.0313 1.594-.0625c13.22-.8438 23.25-12.28 22.39-25.5C294.6 310.3 169.7 185.4 25.57 176.1zM32 32C14.33 32 0 46.31 0 64s14.33 32 32 32c194.1 0 352 157.9 352 352c0 17.69 14.33 32 32 32s32-14.31 32-32C448 218.6 261.4 32 32 32zM63.1 351.9C28.63 351.9 0 380.6 0 416s28.63 64 63.1 64s64.08-28.62 64.08-64S99.37 351.9 63.1 351.9z"
-              fill="currentColor"
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-rss "
+              data-icon="rss"
+              data-prefix="fas"
+              data-testid="fa-icon"
+              focusable="false"
+              role="img"
               style={Object {}}
-            />
-          </svg>
-        </button>
-      </form>
+              viewBox="0 0 448 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 64C0 46.3 14.3 32 32 32c229.8 0 416 186.2 416 416c0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96C14.3 96 0 81.7 0 64zM128 416c0 35.3-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64zM32 160c159.1 0 288 128.9 288 288c0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224c-17.7 0-32-14.3-32-32s14.3-32 32-32z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </button>
+        </form>
+      </div>
     </div>
   </div>
   <div
@@ -199,9 +215,10 @@ exports[`Footer renders correctly 1`] = `
           </li>
           <li>
             <a
-              href="tel:(800) 896-4500"
+              className="undefined disabledLink"
+              href="tel:(973) 462-4199"
             >
-              (800) 896-4500
+              (973) 462-4199
             </a>
           </li>
           <li>
@@ -277,7 +294,7 @@ exports[`Footer renders correctly 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.8 90.69 226.4 209.3 245V327.7h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.3 482.4 504 379.8 504 256z"
+                d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
                 fill="currentColor"
                 style={Object {}}
               />
@@ -300,7 +317,7 @@ exports[`Footer renders correctly 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M459.4 151.7c.325 4.548 .325 9.097 .325 13.65 0 138.7-105.6 298.6-298.6 298.6-59.45 0-114.7-17.22-161.1-47.11 8.447 .974 16.57 1.299 25.34 1.299 49.06 0 94.21-16.57 130.3-44.83-46.13-.975-84.79-31.19-98.11-72.77 6.498 .974 12.99 1.624 19.82 1.624 9.421 0 18.84-1.3 27.61-3.573-48.08-9.747-84.14-51.98-84.14-102.1v-1.299c13.97 7.797 30.21 12.67 47.43 13.32-28.26-18.84-46.78-51.01-46.78-87.39 0-19.49 5.197-37.36 14.29-52.95 51.65 63.67 129.3 105.3 216.4 109.8-1.624-7.797-2.599-15.92-2.599-24.04 0-57.83 46.78-104.9 104.9-104.9 30.21 0 57.5 12.67 76.67 33.14 23.72-4.548 46.46-13.32 66.6-25.34-7.798 24.37-24.37 44.83-46.13 57.83 21.12-2.273 41.58-8.122 60.43-16.24-14.29 20.79-32.16 39.31-52.63 54.25z"
+                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
                 fill="currentColor"
                 style={Object {}}
               />

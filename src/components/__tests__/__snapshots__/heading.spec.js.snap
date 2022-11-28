@@ -5,12 +5,37 @@ exports[`Heading renders correctly 1`] = `
   className="heading"
 >
   <div
+    className="globe"
+  >
+    <div
+      className="globe1"
+    />
+    <div
+      className="globe2"
+    />
+    <div
+      className="globe3"
+    />
+    <div
+      className="globe4"
+    />
+  </div>
+  <div
     className="container"
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   >
     <div
       className="row py-5"
     >
-      <h1>
+      <h1
+        data-sal="slide-down"
+        data-sal-duration="2000"
+        data-sal-easing="ease"
+      >
         About
       </h1>
     </div>

@@ -2,8 +2,9 @@
 
 exports[`CallLink renders correctly 1`] = `
 <a
-  href="tel:(800) 896-4500"
+  className="undefined disabledLink"
+  href="tel:(973) 462-4199"
 >
-  (800) 896-4500
+  (973) 462-4199
 </a>
 `;
