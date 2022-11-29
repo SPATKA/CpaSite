@@ -3,13 +3,14 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
+const siteAddress = new URL("https://www.knaik-cpa.com")
 
 module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: "KNaik Associates",
     description: "KNaik Associates for people",
-    siteUrl: `https://www.cpa-solution.com`,
+    siteUrl: siteAddress.toString(),
     menuLinks: [
       {
         name: "Home",
@@ -512,17 +513,17 @@ module.exports = {
     {
       resolve: `gatsby-plugin-scroll-reveal`,
       options: {
-          threshold: 1, // Percentage of an element's area that needs to be visible to launch animation
-          once: true, // Defines if animation needs to be launched once
-          disable: false, // Flag for disabling animations
-          
-          // Advanced Options
-          selector: '[data-sal]', // Selector of the elements to be animated
-          animateClassName: 'sal-animate', // Class name which triggers animation
-          disabledClassName: 'sal-disabled', // Class name which defines the disabled state
-          rootMargin: '0% 50%', // Corresponds to root's bounding box margin
-          enterEventName: 'sal:in', // Enter event name
-          exitEventName: 'sal:out', // Exit event name
+        threshold: 1, // Percentage of an element's area that needs to be visible to launch animation
+        once: true, // Defines if animation needs to be launched once
+        disable: false, // Flag for disabling animations
+
+        // Advanced Options
+        selector: '[data-sal]', // Selector of the elements to be animated
+        animateClassName: 'sal-animate', // Class name which triggers animation
+        disabledClassName: 'sal-disabled', // Class name which defines the disabled state
+        rootMargin: '0% 50%', // Corresponds to root's bounding box margin
+        enterEventName: 'sal:in', // Enter event name
+        exitEventName: 'sal:out', // Exit event name
       }
     },
     // {
@@ -531,5 +532,13 @@ module.exports = {
     //     lang: 'en'
     //   }
     // }
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "sp-cpa-site",
+        protocol: siteAddress.protocol.slice(0, -1),
+        hostname: siteAddress.hostname,
+      },
+    }
   ],
 }
