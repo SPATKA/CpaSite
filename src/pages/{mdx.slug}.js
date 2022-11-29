@@ -89,9 +89,9 @@ const Page = ({ data }) => {
           <div className="col-lg-4 d-none d-lg-block">
             <div className="text-center position-sticky top-0">
               <StaticImage
-                className="mx-auto"
-                src="../../static/woman-1.png"
-                alt="woman-1"
+                className="mx-auto mb-1"
+                src="../../static/owner-1.png"
+                alt="owner-1"
                 width={260}
                 height={400}
               />

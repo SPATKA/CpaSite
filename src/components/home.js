@@ -36,9 +36,9 @@ const Home = () => {
           data-sal-easing="ease"
         >
           <StaticImage
-            className="mx-auto"
-            src="../../static/woman-1.png"
-            alt="woman-1"
+            className="mx-auto mb-1"
+            src="../../static/owner-1.png"
+            alt="owner-1"
             width={260}
             height={400}
           />
@@ -92,7 +92,7 @@ const Home = () => {
                 If you are looking for a blend of personal service and
                 expertise, you have come to the right place! We offer a broad
                 range of services for business owners, executives and
-                independent professionals. Our rates are affordable. We are
+                independent professionals. Our rates are very affordable. We are
                 experienced and friendly.
               </p>
             </div>
