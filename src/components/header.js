@@ -6,6 +6,7 @@ import List from "./list"
 import LoginModal from "./login-modal"
 import NewsletterModal from "./newsletter-modal"
 import CallLink from "./callLink"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Header = ({ companyName, menuLinks }) => {
   const [modalShow, setModalShow] = useState(false)
@@ -50,8 +51,13 @@ const Header = ({ companyName, menuLinks }) => {
         </h3>
       </Container>
       <Container className="d-flex justify-content-center justify-content-lg-between py-2">
-        <h1>{companyName}</h1>
-        <div className="d-none d-lg-flex">
+        <StaticImage
+            src="../../static/Knaik-logo.png"
+            alt="Knaik-logo"
+            width={256}
+            height={64}
+          />
+        <div className="d-none d-lg-flex my-auto">
           <NavList menuLinks={menuLinks}></NavList>
         </div>
       </Container>
