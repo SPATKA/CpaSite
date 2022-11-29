@@ -65,7 +65,7 @@ const Footer = ({ menuLinks, companyName }) => (
           to a member of our firm.
         </p>
         <button className="btn btn-primary btn-lg">
-          <Link to="/resources/secure-send">Secure Send</Link>
+          <a href="https://knaikassociates.securefilepro.com/portal/#/login" >Secure Send</a>
         </button>
       </div>
     </Container>

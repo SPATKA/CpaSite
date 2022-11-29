@@ -443,11 +443,6 @@ module.exports = {
             subLinks: [],
           },
           {
-            name: "Secure Send",
-            url: "/secure-send",
-            subLinks: [],
-          },
-          {
             name: "Internet Links",
             url: "/internet-links",
             subLinks: [],
