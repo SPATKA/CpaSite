@@ -203,11 +203,6 @@ const Home = () => {
                   there's no substitute for the assistance of an experienced tax
                   professional.
                 </p>
-                <p className="lead">
-                  We can also assist if you find yourself on the wrong side of
-                  the IRS. We're here to help you resolve your tax problems and
-                  put an end to the misery that the IRS can put you through.
-                </p>
                 <p className="lead fw-bold text-center mt-4">
                   Please call us today at <CallLink />. Thanks for visiting!
                 </p>
