@@ -90,3 +90,31 @@ serverless offline
 ```
 
 To learn more about the capabilities of `serverless-offline`, please refer to its [GitHub repository](https://github.com/dherault/serverless-offline).
+
+
+```
+Steps
+```
+
+1. Install serverless globally if already not installed
+  ``` npm i serverles -g ```
+
+2. for creating new serverless project run command
+  ``` serverless ```
+  and follow the prompt steps
+
+3. configure your functions (lambdas), roles, provider, handler.js(main) file, etc. in ``` serverless.yml ``` file
+
+4. before deployment configure AWS credencials on your system
+  ``` aws configure ```
+
+5. modify "sender" and "reciever" mail address in ``` config.json ``` and verify them on AWS platform
+  ==> go to ``` AWS SES ```
+  ==> create entity(email)
+  ==> verify entity(email)
+
+6. for deploy the created function run command
+  ``` serverless deploy ```
+  will deploy function on given platform(provider)
+
+

@@ -2,21 +2,22 @@
 
 // importing AWS sdk
 const AWS = require('aws-sdk');
+const config = require("./config.json");
 
 // Instatiating the SES from AWS SDK
 let ses = new AWS.SES();
 
 // The function to send SES email message
 module.exports.sendMail = (event, context) => {
-  let bccEmailAddresses = event.body.bccEmailAddresses;
-  let ccEmailAddresses = event.body.ccEmailAddresses;
-  let toEmailAddresses = event.body.toEmailAddresses;
-  let bodyData = event.body.bodyData;
+  let bccEmailAddresses = config.bccEmailAddresses;
+  let ccEmailAddresses = config.ccEmailAddresses;
+  let toEmailAddresses = config.toEmailAddresses;
+  const { name, email, phone, comments } =  event.body.bodyData;
   let bodyCharset = event.body.bodyCharset;
   let subjectdata = event.body.subjectdata;
   let subjectCharset = event.body.subjectCharset;
-  let sourceEmail = event.body.sourceEmail;
-  let replyToAddresses = event.body.replyToAddresses;
+  let sourceEmail = config.sourceEmail;
+  let replyToAddresses = config.replyToAddresses;
 
 // The parameters for sending mail using ses.sendEmail()
   let emailParams = {
@@ -28,7 +29,7 @@ module.exports.sendMail = (event, context) => {
     Message: {
       Body: {
         Text: {
-          Data: bodyData,
+          Data: `name: ${name}\nemail: ${email}\nphone: ${phone}\ncomments: ${comments}`,
           Charset: bodyCharset
         }
       },
@@ -54,7 +55,7 @@ module.exports.sendMail = (event, context) => {
     if (err) {
       context.fail(err.stack, 'Internal error!');
     } else {
-      context.done(null, 'Email sent', response);
+      context.done(null, response);
     }
   });
 };
