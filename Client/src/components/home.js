@@ -92,7 +92,7 @@ const Home = () => {
                 If you are looking for a blend of personal service and
                 expertise, you have come to the right place! We offer a broad
                 range of services for business owners, executives and
-                independent professionals. Our rates are very affordable. We are
+                independent professionals. We are
                 experienced and friendly.
               </p>
             </div>
