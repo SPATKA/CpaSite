@@ -31,7 +31,7 @@ const Page = ({ data }) => {
             <div className="text-center position-sticky top-0">
               <StaticImage
                 className="mx-auto mb-1"
-                src="../../static/owner-1.png"
+                src="../../static/owner-ph.png"
                 alt="owner-1"
                 width={260}
                 height={400}
