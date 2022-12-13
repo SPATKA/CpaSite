@@ -25,6 +25,7 @@ const Layout = ({ children }) => {
               }
             }
           }
+          secureSendUrl
         }
       }
     }
@@ -35,11 +36,13 @@ const Layout = ({ children }) => {
       <Header
         companyName={data.site.siteMetadata.title}
         menuLinks={data.site.siteMetadata.menuLinks}
+        secureSendUrl={data.site.siteMetadata.secureSendUrl}
       />
       <main>{children}</main>
       <Footer
         companyName={data.site.siteMetadata.title}
         menuLinks={data.site.siteMetadata.menuLinks}
+        secureSendUrl={data.site.siteMetadata.secureSendUrl}
       />
     </React.Fragment>
   )

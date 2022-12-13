@@ -8,7 +8,7 @@ import NewsletterModal from "./newsletter-modal"
 import CallLink from "./callLink"
 import { StaticImage } from "gatsby-plugin-image"
 
-const Header = ({ menuLinks }) => {
+const Header = ({ menuLinks, secureSendUrl }) => {
   const [newsletterModal, setNewsletterModal] = useState(false)
   const linksObj = JSON.parse(JSON.stringify(menuLinks))
   const links = [...linksObj.map(i => {
@@ -32,10 +32,11 @@ const Header = ({ menuLinks }) => {
         nlShow={newsletterModal}
         onNlshow={() => setNewsletterModal(true)}
         menuLinks={links}
+        secureSendUrl={secureSendUrl}
       ></List>
       <Container className="d-none d-lg-flex justify-content-lg-between py-2">
         <div>
-          <a href={`${process.env.GATSBY_SECURE_SEND_URL}`}>
+          <a href={secureSendUrl}>
             <button className="btn btn-default btn-sm">Login</button>
           </a>
           <button className="btn btn-primary btn-sm" onClick={() => setNewsletterModal(true)}>Subscribe</button>

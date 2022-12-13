@@ -11,7 +11,7 @@ import {
   faCopy,
 } from "@fortawesome/free-regular-svg-icons"
 
-const Footer = ({ menuLinks, companyName }) => (
+const Footer = ({ menuLinks, companyName, secureSendUrl }) => (
   <footer>
     <Container className="row text-center mx-auto f-card-container">
       <div
@@ -65,7 +65,7 @@ const Footer = ({ menuLinks, companyName }) => (
           to a member of our firm.
         </p>
         <button className="btn btn-primary btn-lg">
-          <a href={`${process.env.GATSBY_SECURE_SEND_URL}`}>Secure Send</a>
+          <a href={secureSendUrl}>Secure Send</a>
         </button>
       </div>
     </Container>

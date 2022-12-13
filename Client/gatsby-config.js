@@ -8,7 +8,7 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-const siteAddress = new URL("https://www.knaik-cpa.com")
+const siteAddress = new URL("https://www.knaik-cpa.com");
 
 module.exports = {
   /* Your site config here */
@@ -436,6 +436,7 @@ module.exports = {
         subLinks: [],
       },
     ],
+    secureSendUrl: "https://knaikassociates.securefilepro.com/portal/#/login"
   },
   plugins: [
     {
