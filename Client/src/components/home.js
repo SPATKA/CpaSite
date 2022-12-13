@@ -37,7 +37,7 @@ const Home = () => {
         >
           <StaticImage
             className="mx-auto mb-1"
-            src="../../static/owner-1.png"
+            src="../../static/owner-ph.png"
             alt="owner-1"
             width={260}
             height={400}
@@ -65,7 +65,7 @@ const Home = () => {
                 className="btn btn-primary btn-lg"
                 onClick={() => setModalShow(true)}
               >
-                Free Consultation
+                Schedule a Consultation
               </button>
             </div>
 

@@ -40,7 +40,7 @@ const Page = ({ data }) => {
                 className="btn btn-primary btn-lg"
                 onClick={() => setModalShow(true)}
               >
-                Request A Free Consultation
+                Schedule a Consultation
               </button>
               <ContactUsModel
                 show={modalShow}
