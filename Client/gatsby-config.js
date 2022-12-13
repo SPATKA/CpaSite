@@ -32,11 +32,6 @@ module.exports = {
             subLinks: [],
           },
           {
-            name: "Employment Opportunities",
-            url: "/employment-opportunities",
-            subLinks: [],
-          },
-          {
             name: "Blog",
             url: "/blog",
             subLinks: [],
@@ -55,27 +50,8 @@ module.exports = {
                 name: "Personal Financial Planning",
                 url: "/personal-financial-planning",
                 subLinks: [],
-              },
-              {
-                name: "Retirement Planning",
-                url: "/retirement-planning",
-                subLinks: [],
-              },
-              {
-                name: "Estate Planning",
-                url: "/estate-planning",
-                subLinks: [],
-              },
-              {
-                name: "Elder Care",
-                url: "/elder-care",
-                subLinks: [],
-              },
-              {
-                name: "Wealth Management",
-                url: "/wealth-management",
-                subLinks: [],
-              },
+              }
+              
             ],
           },
           {
