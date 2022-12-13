@@ -8,8 +8,7 @@ import NewsletterModal from "./newsletter-modal"
 import CallLink from "./callLink"
 import { StaticImage } from "gatsby-plugin-image"
 
-const Header = ({ companyName, menuLinks }) => {
-  const [modalShow, setModalShow] = useState(false)
+const Header = ({ menuLinks }) => {
   const [newsletterModal, setNewsletterModal] = useState(false)
   const linksObj = JSON.parse(JSON.stringify(menuLinks))
   const links = [...linksObj.map(i => {
@@ -30,16 +29,15 @@ const Header = ({ companyName, menuLinks }) => {
   return (
     <React.Fragment>
       <List
-        show={modalShow}
         nlShow={newsletterModal}
-        onShow={() => setModalShow(true)}
         onNlshow={() => setNewsletterModal(true)}
         menuLinks={links}
       ></List>
       <Container className="d-none d-lg-flex justify-content-lg-between py-2">
         <div>
-          <button className="btn btn-default btn-sm" onClick={() => setModalShow(true)}>Login</button>
-          <LoginModal show={modalShow} onHide={() => setModalShow(false)} />
+          <a href={`${process.env.GATSBY_SECURE_SEND_URL}`}>
+            <button className="btn btn-default btn-sm">Login</button>
+          </a>
           <button className="btn btn-primary btn-sm" onClick={() => setNewsletterModal(true)}>Subscribe</button>
           <NewsletterModal
             show={newsletterModal}

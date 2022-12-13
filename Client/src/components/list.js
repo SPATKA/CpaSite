@@ -11,7 +11,7 @@ import Offcanvas from "react-bootstrap/Offcanvas"
 import Sidebar from "./Sidebar"
 import CallLink from "./callLink"
 
-const List = ({ menuLinks, onShow, onNlshow }) => {
+const List = ({ menuLinks, onNlshow }) => {
   const [show, setShow] = useState(false)
 
   const handleClose = () => setShow(false)
@@ -19,9 +19,9 @@ const List = ({ menuLinks, onShow, onNlshow }) => {
   return (
     <>
       <div className="d-flex justify-content-between d-lg-none py-2">
-        <span className="flex-grow-1 text-center icon-color" onClick={onShow}>
+        <a className="flex-grow-1 text-center icon-color" href="https://knaikassociates.securefilepro.com/portal/#/login">
           <FontAwesomeIcon icon={faLock} size="sm"></FontAwesomeIcon>
-        </span>
+        </a>
         <span className="flex-grow-1 text-center icon-color" onClick={onNlshow}>
           <FontAwesomeIcon icon={faFeed} size="sm"></FontAwesomeIcon>
         </span>

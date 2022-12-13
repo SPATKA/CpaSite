@@ -3,6 +3,11 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 const siteAddress = new URL("https://www.knaik-cpa.com")
 
 module.exports = {
