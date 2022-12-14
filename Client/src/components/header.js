@@ -3,12 +3,13 @@ import { useState } from "react"
 import NavList from "./nav-list"
 import { Container } from "react-bootstrap"
 import List from "./list"
-import LoginModal from "./login-modal"
 import NewsletterModal from "./newsletter-modal"
 import CallLink from "./callLink"
 import { StaticImage } from "gatsby-plugin-image"
 
-const Header = ({ menuLinks, secureSendUrl }) => {
+const config = require('../../site-config');
+
+const Header = ({ menuLinks }) => {
   const [newsletterModal, setNewsletterModal] = useState(false)
   const linksObj = JSON.parse(JSON.stringify(menuLinks))
   const links = [...linksObj.map(i => {
@@ -32,14 +33,15 @@ const Header = ({ menuLinks, secureSendUrl }) => {
         nlShow={newsletterModal}
         onNlshow={() => setNewsletterModal(true)}
         menuLinks={links}
-        secureSendUrl={secureSendUrl}
       ></List>
       <Container className="d-none d-lg-flex justify-content-lg-between py-2">
         <div>
-          <a href={secureSendUrl}>
+          <a href={config.secureSendUrl}>
             <button className="btn btn-default btn-sm">Login</button>
           </a>
-          <button className="btn btn-primary btn-sm" onClick={() => setNewsletterModal(true)}>Subscribe</button>
+          {config.newsletterFeatureToggle && (
+            <button className="btn btn-primary btn-sm" onClick={() => setNewsletterModal(true)}>Subscribe</button>
+          )}
           <NewsletterModal
             show={newsletterModal}
             onHide={() => setNewsletterModal(false)}
@@ -51,11 +53,11 @@ const Header = ({ menuLinks, secureSendUrl }) => {
       </Container>
       <Container className="d-flex justify-content-center justify-content-lg-between py-2">
         <StaticImage
-            src="../../static/Knaik-logo.png"
-            alt="Knaik-logo"
-            width={256}
-            height={64}
-          />
+          src="../../static/Knaik-logo.png"
+          alt="Knaik-logo"
+          width={256}
+          height={64}
+        />
         <div className="d-none d-lg-flex my-auto">
           <NavList menuLinks={menuLinks}></NavList>
         </div>

@@ -10,8 +10,9 @@ import {
   faCalendar,
   faCopy,
 } from "@fortawesome/free-regular-svg-icons"
+const config = require('../../site-config');
 
-const Footer = ({ menuLinks, companyName, secureSendUrl }) => (
+const Footer = ({ menuLinks, companyName }) => (
   <footer>
     <Container className="row text-center mx-auto f-card-container">
       <div
@@ -65,13 +66,15 @@ const Footer = ({ menuLinks, companyName, secureSendUrl }) => (
           to a member of our firm.
         </p>
         <button className="btn btn-primary btn-lg">
-          <a href={secureSendUrl}>Secure Send</a>
+          <a href={config.secureSendUrl}>Secure Send</a>
         </button>
       </div>
     </Container>
-    <div data-sal="slide-down" data-sal-duration="2000" data-sal-easing="ease">
-      <Newsletter />
-    </div>
+    {config.newsletterFeatureToggle && (
+      <div data-sal="slide-down" data-sal-duration="2000" data-sal-easing="ease">
+        <Newsletter />
+      </div>
+    )}
     <FooterNav menuLinks={menuLinks} companyName={companyName} />
   </footer>
 )

@@ -22,7 +22,7 @@ export default function SidebarItem({ item }) {
         </div>
         <div className="sidebar-content">
           {item.subLinks?.map((child, index) => {
-            return <SidebarItem key={index} item={child} />
+            return !child.isHidden && <SidebarItem key={index} item={child} />
           })}
         </div>
       </div>

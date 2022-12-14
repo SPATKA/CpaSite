@@ -20,13 +20,13 @@ const FooterNav = ({ menuLinks, companyName }) => {
       <Container>
         <div className={linkConatainer}>
           {menuLinks?.map(link => {
-            if (link.name === "Resources") {
+            if (link.name === "Resources" && !link.isHidden) {
               return (
                 <ul key="ul-1" className={navLinks}>
                   <li key="resources-ul-1"><h3>{link.name}</h3></li>
                   {link.subLinks?.map((subLink, i) => {
                     return (
-                      <li key={subLink.url + i}>
+                      !subLink.isHidden && <li key={subLink.url + i}>
                         <Link to={"/resources" + subLink.url}>
                           {subLink.name}
                         </Link>
@@ -36,13 +36,13 @@ const FooterNav = ({ menuLinks, companyName }) => {
                 </ul>
               )
             }
-            if (link.name === "Tax Center") {
+            if (link.name === "Tax Center" && !link.isHidden) {
               return (
                 <ul key="ul-2" className={navLinks}>
                   <li key="tax-center-ul-2"><h3>{link.name}</h3></li>
                   {link.subLinks?.map((subLink, i) => {
                     return (
-                      <li key={subLink.url + i}>
+                      !subLink.isHidden && <li key={subLink.url + i}>
                         <Link to={"/tax-center" + subLink.url}>
                           {subLink.name}
                         </Link>

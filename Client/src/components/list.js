@@ -10,8 +10,9 @@ import {
 import Offcanvas from "react-bootstrap/Offcanvas"
 import Sidebar from "./Sidebar"
 import CallLink from "./callLink"
+const config = require('../../site-config');
 
-const List = ({ menuLinks, onNlshow, secureSendUrl }) => {
+const List = ({ menuLinks, onNlshow }) => {
   const [show, setShow] = useState(false)
 
   const handleClose = () => setShow(false)
@@ -19,12 +20,12 @@ const List = ({ menuLinks, onNlshow, secureSendUrl }) => {
   return (
     <>
       <div className="d-flex justify-content-between d-lg-none py-2">
-        <a className="flex-grow-1 text-center icon-color" href={secureSendUrl}>
+        <a className="flex-grow-1 text-center icon-color" href={config.secureSendUrl}>
           <FontAwesomeIcon icon={faLock} size="sm"></FontAwesomeIcon>
         </a>
-        <span className="flex-grow-1 text-center icon-color" onClick={onNlshow}>
+        {config.newsletterFeatureToggle && (<span className="flex-grow-1 text-center icon-color" onClick={onNlshow}>
           <FontAwesomeIcon icon={faFeed} size="sm"></FontAwesomeIcon>
-        </span>
+        </span>)}
         <a
           className="flex-grow-1 text-center icon-color"
           href="mailto:Kartiki@knaikassociates.com"
