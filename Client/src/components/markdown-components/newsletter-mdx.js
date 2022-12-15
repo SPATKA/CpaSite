@@ -1,5 +1,5 @@
 import React from "react"
-const config = require('../../site-config');
+const config = require("../../../site-config");
 
 const NewsLetterMDX = () => {
     return (

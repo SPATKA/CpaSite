@@ -60,7 +60,7 @@ module.exports = {
           {
             name: "Business Services",
             url: "/business-services",
-            isHidden: false,
+            isHidden: !config.businessServicesToggle,
             subLinks: [
               {
                 name: "Small Business Accounting",
@@ -163,7 +163,7 @@ module.exports = {
           {
             name: "Tax Services",
             url: "/tax-services",
-            isHidden: false,
+            isHidden: !config.taxServicesToggle,
             subLinks: [
               {
                 name: "Individual Tax Preparation",
@@ -279,7 +279,7 @@ module.exports = {
           {
             name: "Services For QuickBooks",
             url: "/services-for-quick-books",
-            isHidden: false,
+            isHidden: !config.servicesForQuickBooksToggle,
             subLinks: [
               {
                 name: "Why QuickBooks",
@@ -322,7 +322,7 @@ module.exports = {
           {
             name: "Industries",
             url: "/industries",
-            isHidden: false,
+            isHidden: !config.industriesToggle,
             subLinks: [
               {
                 name: "Construction",
