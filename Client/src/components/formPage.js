@@ -11,7 +11,7 @@ const FormPage = () => {
     reset,
     setError,
   } = useForm()
-  const URL="https://3ct3mrc87g.execute-api.us-east-1.amazonaws.com/dev/sendMail"
+  const URL = "https://3ct3mrc87g.execute-api.us-east-1.amazonaws.com/dev/sendMail"
   const onSubmit = async data => {
     console.log("formData", data)
     try {
@@ -25,7 +25,7 @@ const FormPage = () => {
         }),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
-         },
+        },
       }).then(() => {
         setSuccess(true)
       })
@@ -78,15 +78,19 @@ const FormPage = () => {
         </label>
         <input
           name="phone"
-          type="number"
+          type="text"
           id="phone"
           className="form-control"
           placeholder="Enter phone number"
-          {...register("phone", { required: "Phone number is required." })}
+          {...register("phone", { required: "Phone number is required.", pattern: /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/ })}
           aria-invalid={errors.phone ? "true" : "false"}
         />
-        {errors.phone && (
+        {errors.phone && (<>
           <div className={formError}>{errors.phone?.message}</div>
+          {errors.phone?.type === 'pattern' && <div className={formError}>
+            Enter valid phone number.
+          </div>}
+        </>
         )}
       </div>
       <div className="mb-3">
@@ -98,7 +102,7 @@ const FormPage = () => {
           placeholder="Leave a comment here"
           {...register("comments")}
           aria-invalid={errors.comments ? "true" : "false"}
-          ></textarea>
+        ></textarea>
         {errors.comments && (
           <div className={formError}>{errors.comments?.message}</div>
         )}
