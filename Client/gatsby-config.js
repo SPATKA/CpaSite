@@ -4,8 +4,8 @@ const siteAddress = new URL("https://www.knaik-cpa.com");
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "KNaik Associates",
-    description: "KNaik Associates for people",
+    title: "K Naik Associates",
+    description: "K Naik Associates for people",
     siteUrl: siteAddress.toString(),
     menuLinks: [
       {

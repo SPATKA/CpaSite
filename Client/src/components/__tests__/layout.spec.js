@@ -10,7 +10,7 @@ const useStaticQuery = jest.spyOn(Gatsby, `useStaticQuery`)
 const mockUseStaticQuery = {
   site: {
     siteMetadata: {
-      title: `KNaik Associates`,
+      title: `K Naik Associates`,
       menuLinks: [],
     },
   }
@@ -51,7 +51,7 @@ describe("Layout", () => {
     useStaticQuery.mockReturnValueOnce({
       site: {
         siteMetadata: {
-          title: `KNaik Associates`,
+          title: `K Naik Associates`,
           menuLinks: [],
         },
       },

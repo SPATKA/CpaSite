@@ -70,5 +70,5 @@ export const query = graphql`
 export default Page
 
 export const Head = ({ data }) => (
-  <Seo title={"KNaik Associates | " + data.mdx.frontmatter.title} />
+  <Seo title={"K Naik Associates | " + data.mdx.frontmatter.title} />
 )
