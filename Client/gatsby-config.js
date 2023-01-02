@@ -47,12 +47,12 @@ module.exports = {
           {
             name: "Services For Inividuals",
             url: "/services-for-individuals",
-            isHidden: false,
+            isHidden: true,
             subLinks: [
               {
                 name: "Personal Financial Planning",
                 url: "/personal-financial-planning",
-                isHidden: false,
+                isHidden: true,
                 subLinks: [],
               }
             ],
@@ -60,7 +60,7 @@ module.exports = {
           {
             name: "Business Services",
             url: "/business-services",
-            isHidden: !config.businessServicesToggle,
+            isHidden: false,
             subLinks: [
               {
                 name: "Small Business Accounting",
@@ -83,55 +83,55 @@ module.exports = {
               {
                 name: "Part-Time CFO Services",
                 url: "/part-time-cfo-services",
-                isHidden: false,
+                isHidden: true,
                 subLinks: [],
               },
               {
                 name: "Audits-Reviews-Compilations",
                 url: "/audits-reviews-compilations",
-                isHidden: false,
+                isHidden: true,
                 subLinks: [],
               },
               {
                 name: "Forensic Accounting",
                 url: "/forensic-accounting",
-                isHidden: false,
+                isHidden: true,
                 subLinks: [],
               },
               {
                 name: "Cash Flow Management",
                 url: "/cash-flow-management",
-                isHidden: false,
+                isHidden: true,
                 subLinks: [],
               },
               {
                 name: "Bank Financing",
                 url: "/bank-financing",
-                isHidden: false,
+                isHidden: true,
                 subLinks: [],
               },
               {
                 name: "Business Valuation",
                 url: "/business-valuation",
-                isHidden: false,
+                isHidden: true,
                 subLinks: [],
               },
               {
                 name: "Business Advisory Services",
                 url: "/business-advisory-services",
-                isHidden: false,
+                isHidden: true,
                 subLinks: [],
               },
               {
                 name: "Financial Planning for Businesses",
                 url: "/financial-planning-for-businesses",
-                isHidden: false,
+                isHidden: true,
                 subLinks: [],
               },
               {
                 name: "Succession Planning",
                 url: "/succession-planning",
-                isHidden: false,
+                isHidden: true,
                 subLinks: [],
               },
               {
@@ -143,19 +143,19 @@ module.exports = {
               {
                 name: "Non-Profit Organizations",
                 url: "/non-profit-organizations",
-                isHidden: false,
+                isHidden: true,
                 subLinks: [],
               },
               {
                 name: "Internal Controls",
                 url: "/internal-controls",
-                isHidden: false,
+                isHidden: true,
                 subLinks: [],
               },
               {
                 name: "Litigation Support",
                 url: "/litigation-support",
-                isHidden: false,
+                isHidden: true,
                 subLinks: [],
               },
             ],
