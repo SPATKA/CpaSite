@@ -33,7 +33,7 @@ describe("List", () => {
   test("should renders `FontAwesomeIcon` & `CallLink' components", () => {
     const testRenderer = TestRenderer.create(<List />)
     const testInstance = testRenderer.root
-    expect(testInstance.findAllByType(FontAwesomeIcon).length).toEqual(5)
+    expect(testInstance.findAllByType(FontAwesomeIcon).length).toEqual(4)
     expect(testInstance.findByType(CallLink)).toBeTruthy()
     expect(testInstance.findByType(Offcanvas)).toBeTruthy()
   })

@@ -48,6 +48,7 @@ const FormPage = () => {
           type="text"
           name="name"
           id="name"
+          data-testid="name"
           className="form-control"
           placeholder="Enter your name"
           {...register("name", { required: "Name is required." })}
@@ -63,6 +64,7 @@ const FormPage = () => {
           name="email"
           type="email"
           id="email"
+          data-testid="email"
           className="form-control"
           placeholder="your@email.address"
           {...register("email", { required: "Email address is required." })}
@@ -80,6 +82,7 @@ const FormPage = () => {
           name="phone"
           type="text"
           id="phone"
+          data-testid="phone"
           className="form-control"
           placeholder="Enter phone number"
           {...register("phone", { required: "Phone number is required.", pattern: /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/ })}
@@ -108,10 +111,10 @@ const FormPage = () => {
         )}
       </div>
       <div className="d-flex justify-content-end">
-        <button type="button" className="btn btn-secondary mx-1" onClick={onReset}>
+        <button type="button" data-testid="reset" className="btn btn-secondary mx-1" onClick={onReset}>
           reset
         </button>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" data-testid="submit" className="btn btn-primary">
           Send
         </button>
       </div>
@@ -119,7 +122,7 @@ const FormPage = () => {
   )
   return (
     <div className="mx-auto" style={{ maxWidth: "400px" }}>
-      {success && (<p>Details was successfully submitted ...</p>)}
+      {success && (<p data-testid="submit-success">Details was successfully submitted ...</p>)}
       {showForm}
     </div>
   )

@@ -5,9 +5,9 @@ Array [
   <div
     className="d-flex justify-content-between d-lg-none py-2"
   >
-    <span
+    <a
       className="flex-grow-1 text-center icon-color"
-      onClick={[Function]}
+      href="www.test.com"
     >
       <svg
         aria-hidden="true"
@@ -26,7 +26,7 @@ Array [
           style={Object {}}
         />
       </svg>
-    </span>
+    </a>
     <span
       className="flex-grow-1 text-center icon-color"
       onClick={[Function]}
@@ -148,12 +148,15 @@ Array [
     className="d-none d-lg-flex justify-content-lg-between py-2 container"
   >
     <div>
-      <button
-        className="btn btn-default btn-sm"
-        onClick={[Function]}
+      <a
+        href="www.test.com"
       >
-        Login
-      </button>
+        <button
+          className="btn btn-default btn-sm"
+        >
+          Login
+        </button>
+      </a>
       <button
         className="btn btn-primary btn-sm"
         onClick={[Function]}
@@ -176,9 +179,8 @@ Array [
   <div
     className="d-flex justify-content-center justify-content-lg-between py-2 container"
   >
-    <h1 />
     <div
-      className="d-none d-lg-flex"
+      className="d-none d-lg-flex my-auto"
     >
       <ul
         className="linkContainer"

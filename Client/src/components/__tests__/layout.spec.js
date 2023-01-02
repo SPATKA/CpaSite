@@ -4,15 +4,50 @@ import Layout from "../layout"
 import Header from "../header"
 import Footer from "../footer"
 import TestRenderer from "react-test-renderer"
-import { useStaticQuery } from "gatsby"
+import * as Gatsby from "gatsby"
+
+const useStaticQuery = jest.spyOn(Gatsby, `useStaticQuery`)
+const mockUseStaticQuery = {
+  site: {
+    siteMetadata: {
+      title: `KNaik Associates`,
+      menuLinks: [],
+    },
+  }
+}
 
 describe("Layout", () => {
-  it.skip("renders correctly", () => {
+
+  beforeAll(() => {
+    Object.defineProperty(window, "matchMedia", {
+      writable: true,
+      value: jest.fn().mockImplementation(query => ({
+        matches: false,
+        media: query,
+        onchange: null,
+        addListener: jest.fn(), // Deprecated
+        removeListener: jest.fn(), // Deprecated
+        addEventListener: jest.fn(),
+        removeEventListener: jest.fn(),
+        dispatchEvent: jest.fn(),
+      }))
+    });
+  });
+
+  beforeEach(() => {
+    useStaticQuery.mockImplementation(() => mockUseStaticQuery)
+  })
+
+  afterEach(() => {
+    jest.restoreAllMocks()
+  })
+
+  it("renders correctly", () => {
     const tree = renderer.create(<Layout />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
-  test.skip("should renders `Header` & `Footer' components", () => {
+  test("should renders `Header` & `Footer' components", () => {
     useStaticQuery.mockReturnValueOnce({
       site: {
         siteMetadata: {

@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormPage renders correctly 1`] = `
+<div
+  className="mx-auto"
+  style={
+    Object {
+      "maxWidth": "400px",
+    }
+  }
+>
+  <form
+    method="post"
+    onSubmit={[Function]}
+  >
+    <div
+      className="mb-3"
+    >
+      <label
+        className="form-label"
+        htmlFor="name"
+      >
+        Name
+      </label>
+      <input
+        aria-invalid="false"
+        className="form-control"
+        data-testid="name"
+        id="name"
+        name="name"
+        onBlur={[Function]}
+        onChange={[Function]}
+        placeholder="Enter your name"
+        type="text"
+      />
+    </div>
+    <div
+      className="mb-3"
+    >
+      <label
+        className="form-label"
+        htmlFor="email"
+      >
+        Email address
+      </label>
+      <input
+        aria-invalid="false"
+        className="form-control"
+        data-testid="email"
+        id="email"
+        name="email"
+        onBlur={[Function]}
+        onChange={[Function]}
+        placeholder="your@email.address"
+        type="email"
+      />
+    </div>
+    <div
+      className="mb-3"
+    >
+      <label
+        className="form-label"
+        htmlFor="phone"
+      >
+        Phone Number
+      </label>
+      <input
+        aria-invalid="false"
+        className="form-control"
+        data-testid="phone"
+        id="phone"
+        name="phone"
+        onBlur={[Function]}
+        onChange={[Function]}
+        placeholder="Enter phone number"
+        type="text"
+      />
+    </div>
+    <div
+      className="mb-3"
+    >
+      <label
+        htmlFor="comments"
+      >
+        Comments
+      </label>
+      <textarea
+        aria-invalid="false"
+        className="form-control"
+        id="comments"
+        name="comments"
+        onBlur={[Function]}
+        onChange={[Function]}
+        placeholder="Leave a comment here"
+      />
+    </div>
+    <div
+      className="d-flex justify-content-end"
+    >
+      <button
+        className="btn btn-secondary mx-1"
+        data-testid="reset"
+        onClick={[Function]}
+        type="button"
+      >
+        reset
+      </button>
+      <button
+        className="btn btn-primary"
+        data-testid="submit"
+        type="submit"
+      >
+        Send
+      </button>
+    </div>
+  </form>
+</div>
+`;
