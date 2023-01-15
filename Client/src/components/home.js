@@ -98,23 +98,7 @@ const Home = () => {
             </div>
           </div>
           <div className="row my-5 mx-3 align-xs-center text-center text-sm-start d-flex default-color">
-            <div className="col-lg-6 col-md-12 my-4">
-              <div className="row">
-                <div className="col-sm-2 icon-color text-center">
-                  <FontAwesomeIcon icon={faCompass} size="4x" />
-                </div>
-                <div className="col-sm-10">
-                  <h3>Services For Individuals</h3>
-                  <p>
-                    You get one-on-one guidance that helps manage risk and
-                    improve performance.
-                    <Link to={"/services/services-for-individuals"}>
-                      learn more
-                    </Link>
-                  </p>
-                </div>
-              </div>
-            </div>
+            
             <div className="col-lg-6 col-md-12 my-4">
               <div className="row">
                 <div className="col-sm-2 icon-color text-center">
@@ -162,6 +146,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
+
           </div>
         </Container>
       </div>
